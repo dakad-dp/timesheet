@@ -41,7 +41,7 @@ export class NewDipendentePageComponent implements OnInit {
       });
     });
   }
-
+  //buongiorno
   update(event: any) {
     this.c.getRegions(event.target.value).subscribe(resp => {
       this.x = resp;
