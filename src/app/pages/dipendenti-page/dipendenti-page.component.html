@@ -1,0 +1,24 @@
+<div class="card mt-3">
+  <div class="card-body">
+    <div class="row">
+      <app-filter [options]="options" (onSearch)="search($event)"> </app-filter>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <a class="btn btn-dark mb-2" routerLink="/dipendenti/new">New</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <app-data-table
+          [list]="list"
+          [options]="options"
+          selection="single"
+          (onDetail)="detail($event)"
+          (onDel)="delete($event)"
+          (onEdit)="edit($event)"
+        ></app-data-table>
+      </div>
+    </div>
+  </div>
+</div>

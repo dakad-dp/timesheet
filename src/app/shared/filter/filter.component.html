@@ -1,0 +1,26 @@
+<div *ngIf="formGroup">
+  <form [formGroup]="formGroup" class="form-inline">
+    <div class="form-group row px-3">
+      <select
+        class="browser-default custom-select ml-3 mb-1"
+        formControlName="filter"
+      >
+        <option
+          *ngFor="let options of options.colOptions"
+          [value]="options.name"
+          >{{ options.label }}</option
+        >
+      </select>
+      <label class="ml-3" for="value">Value</label>
+      <input
+        class="form-control ml-1"
+        type="text"
+        id="value"
+        formControlName="value"
+      />
+      <button type="submit" class="btn btn-dark ml-1" (click)="search()">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
